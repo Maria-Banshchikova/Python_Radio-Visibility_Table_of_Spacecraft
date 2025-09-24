@@ -229,32 +229,7 @@ def generate_visability_data_file(filepath, rows, cols, numfile):
                     matr_vidim[i][j] = 0
             vidimost = np.array(matr_vidim)
         np.savetxt(filepath, vidimost, fmt='%d', delimiter=' ')
-        
-        # for ifile in range(numfile):
-            # for jfile in range(numfile):
-                # print('i_file =', ifile,'j_file =', jfile)
-                # count = 0
-                # if ifile != jfile:
-                    # first_filename  = list(satellite_data.keys())[ifile] #[i] - это номер файла
-                    # second_filename = list(satellite_data.keys())[jfile] #[j] - это второй файл
-                
-                    # #print(f"Данные из файла '{first_filename}':")
-                    # for i, row1 in enumerate(satellite_data[first_filename]): #убрала [i] - это номер строки из 1 файла
-                        # for j, row2 in enumerate(satellite_data[second_filename]): #убрала [j] - это номер строки из 2 файла
-                            # #print('i=', i, 'j=', j)
-                            # #print(f"Строка {i+3}: {row[1:4]}") # +3 потому что мы пропустили строку 1 и 2
-                            # usl = usl_visability(row1[1:4], row2[1:4])
-                            # #print(usl[0], usl[1], usl[2])
-                            # if usl[0] > 0 and usl[1] > 0 and usl[2] > 0:
-                                # count += 1 # количество видимостей за период времени
-                    
-                    # matr_vidim[ifile][jfile] = 100.0 * count * nstrokinfile
-            # vidimost = np.array(matr_vidim)
-        # np.savetxt(filepath, vidimost, fmt='%d', delimiter=' ')
-
-    # print(f"\nОбщее количество файлов, из которых прочитаны данные: {len(satellite_data)}")
-
-
+  
 def load_data_from_file(filepath, expected_rows, expected_cols):
     """
     Загружает полученные данные видимости из файла.
@@ -531,12 +506,7 @@ if __name__ == "__main__":
     # Создаем словарь (глобальная переменная)
     mapped_data = map_values_to_colors(values_list, colors_list)
         
-    # Генерируем файл с данными видимости КА, если его нет
-    # (или если размеры не соответствуют текущим настройкам)
-    #if not os.path.exists(DATA_FILE) or \
-    #   np.loadtxt(DATA_FILE, dtype=int).shape != (NUM_ROWS, NUM_COLS):
-    #   print("Файла table_data.txt нет в папке.") 
-        # моя функция для генерации файла с процентами видимости КА. Для 24 файлов работает 2.5 часа (на фортране считает 1 секунду)
+    # моя функция для генерации файла с процентами видимости КА. 
     generate_visability_data_file(DATA_FILE, NUM_ROWS, NUM_COLS, NUM_FILES)
     #else:
  
