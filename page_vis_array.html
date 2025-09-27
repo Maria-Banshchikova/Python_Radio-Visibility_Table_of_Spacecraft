@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Описание Программы Радиовидимости</title>
+    <style>
+        /* Простые стили для лучшего отображения */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        img {
+            display: block; /* Чтобы изображение занимало отдельную строку */
+            margin: 20px auto; /* Центрирование изображения */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .filename {
+            font-style: italic;
+            color: #555;
+        }
+        .explanation {
+            margin-top: 15px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Описание Программы Радиовидимости Космических Аппаратов</h1>
+
+        <p>
+            <strong>Язык разработки:</strong> Python.
+        </p>
+
+        <h2>Входные и выходные данные</h2>
+        <p>
+            На вход программе подаются файлы с координатами космических аппаратов (КА) на заданные моменты времени, полученные с помощью высокоточной численной модели движения ИСЗ.
+        </p>
+        <p>
+            На выходе получается таблица радиовидимости КА заданных орбитальных группировок в формате эксель.
+        </p>
+
+        <h2>Результат выполнения программы</h2>
+
+        <figure>
+            <img src="https://github.com/user-attachments/assets/f452a5eb-7579-472f-b559-17a7981df963" alt="Пример таблицы радиовидимости КА" width="931" height="721">
+            <figcaption class="explanation">
+                Таблица радиовидимости для одной из орбитальных группировок за один виток, как если бы все космические аппараты могли осуществлять обмен радиоданными друг с другом.
+            </figcaption>
+        </figure>
+
+        <p>
+            Результат сохраняется в таблицу с расширением <strong class="filename">*.xlsx</strong>.
+        </p>
+
+    </div>
+
+</body>
+</html>
